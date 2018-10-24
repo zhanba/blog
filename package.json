@@ -9,7 +9,7 @@
     "serve": "gatsby serve",
     "lint:ts": "tslint",
     "gql-gen": "cross-env CODEGEN_NO_NAMESPACES=true gql-gen --schema http://localhost:8000/___graphql --template graphql-codegen-typescript-template --out ./src/typings/ \"./src/**/*.tsx\"",
-    "deploy": "gatsby build && gh-pages -d public"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "gatsby": "^2.0.0",
