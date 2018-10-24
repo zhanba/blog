@@ -1,0 +1,38 @@
+{
+  "name": "gatsby-starter-hello-world",
+  "description": "Gatsby hello world starter",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "lint:ts": "tslint",
+    "gql-gen": "cross-env CODEGEN_NO_NAMESPACES=true gql-gen --schema http://localhost:8000/___graphql --template graphql-codegen-typescript-template --out ./src/typings/ \"./src/**/*.tsx\""
+  },
+  "dependencies": {
+    "gatsby": "^2.0.0",
+    "gatsby-plugin-typescript": "^2.0.0",
+    "gatsby-plugin-typography": "^2.2.0",
+    "gatsby-source-filesystem": "^2.0.5",
+    "gatsby-transformer-remark": "^2.1.8",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-typography": "^0.16.13",
+    "typography": "^0.16.17"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.0.3",
+    "@types/typography": "^0.16.0",
+    "cross-env": "^5.2.0",
+    "graphql-code-generator": "^0.12.6",
+    "graphql-codegen-typescript-template": "^0.12.6",
+    "prettier": "^1.14.3",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.1.3",
+    "typography-theme-fairy-gates": "^0.15.11",
+    "typography-theme-github": "^0.15.10"
+  }
+}
