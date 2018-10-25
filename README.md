@@ -10,3 +10,4 @@ gatesby 使用 Babel 插件转译代码，Babel 插件不支持 namespace 和 co
 
 - generate graphql types more consice
 - search https://community.algolia.com/docsearch/
+- tags https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/
