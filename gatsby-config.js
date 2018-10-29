@@ -1,3 +1,5 @@
+const { resolve } = require('path')
+
 module.exports = {
   // https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/
   pathPrefix: '/blog',
@@ -9,6 +11,7 @@ module.exports = {
     `gatsby-plugin-nprogress`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -32,7 +35,7 @@ module.exports = {
               classPrefix: 'language-',
               // Example code links are relative to this dir.
               // eg examples/path/to/file.js
-              directory: `${__dirname}/examples/`,
+              directory: resolve(__dirname, 'examples'),
             },
           },
         ],
