@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import Helmet from 'react-helmet'
 import Layout from '../layouts'
 import { Query } from '../typings/types'
 
@@ -27,6 +28,10 @@ export default class Content extends React.Component<IContentProps, any> {
     const { data } = this.props
     return (
       <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Content</title>
+        </Helmet>
         <div>
           <h1>My Site's Files</h1>
           <table>
