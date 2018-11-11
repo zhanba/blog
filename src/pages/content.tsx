@@ -6,13 +6,13 @@ import { Query } from '../typings/types'
 
 export const query = graphql`
   query {
-    allFile {
+    allMarkdownRemark {
       edges {
         node {
-          relativePath
-          prettySize
-          extension
-          birthTime(fromNow: true)
+          frontmatter {
+            title
+            date
+          }
         }
       }
     }
@@ -33,24 +33,19 @@ export default class Content extends React.Component<IContentProps, any> {
           <title>Content</title>
         </Helmet>
         <div>
-          <h1>My Site's Files</h1>
           <table>
             <thead>
               <tr>
-                <th>relativePath</th>
-                <th>prettySize</th>
-                <th>extension</th>
-                <th>birthTime</th>
+                <th>title</th>
+                <th>date</th>
               </tr>
             </thead>
             <tbody>
-              {data.allFile &&
-                data!.allFile!.edges!.map(({ node }, index) => (
+              {data.allMarkdownRemark &&
+                data!.allMarkdownRemark!.edges!.map(({ node }, index) => (
                   <tr key={index}>
-                    <td>{node!.relativePath}</td>
-                    <td>{node!.prettySize}</td>
-                    <td>{node!.extension}</td>
-                    <td>{node!.birthTime}</td>
+                    <td>{node!.frontmatter!.title}</td>
+                    <td>{node!.frontmatter!.date}</td>
                   </tr>
                 ))}
             </tbody>
