@@ -4,7 +4,7 @@ module.exports = {
   // https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/
   pathPrefix: '/blog',
   siteMetadata: {
-    siteName: `Gatsby site`,
+    siteName: `Ryannz's blog`,
   },
   plugins: [
     `gatsby-plugin-typescript`,
