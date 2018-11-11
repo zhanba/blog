@@ -1,6 +1,7 @@
 ---
 title: 'front end devtools'
 date: '2017-08-21'
+tags: ['javascript', 'tooling']
 ---
 
 - Commitizen 提供交互式命令行提交 commit 信息

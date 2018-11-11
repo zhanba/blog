@@ -105,12 +105,25 @@ export interface SitePlugin extends Node {
 
 export interface PluginOptions_3 {
   plugins?: Plugins_2[] | null
+  name?: string | null
+  short_name?: string | null
+  start_url?: string | null
+  background_color?: string | null
+  theme_color?: string | null
+  display?: string | null
+  icon?: string | null
+  maxWidth?: number | null
+  wrapperStyle?: string | null
+  backgroundColor?: string | null
+  linkImagesToOriginal?: boolean | null
+  showCaptions?: boolean | null
+  pathPrefix?: string | null
+  withWebp?: boolean | null
+  ignoreFileExtensions?: string[] | null
   classPrefix?: string | null
-  showLineNumbers?: boolean | null
-  noInlineHighlight?: boolean | null
+  directory?: string | null
   pathToConfigModule?: string | null
   omitGoogleFont?: boolean | null
-  name?: string | null
   path?: string | null
   trackingId?: string | null
   pathCheck?: boolean | null
@@ -126,9 +139,16 @@ export interface Plugins_2 {
 }
 
 export interface PluginOptions_4 {
+  maxWidth?: number | null
+  wrapperStyle?: string | null
+  backgroundColor?: string | null
+  linkImagesToOriginal?: boolean | null
+  showCaptions?: boolean | null
+  pathPrefix?: string | null
+  withWebp?: boolean | null
+  ignoreFileExtensions?: string[] | null
   classPrefix?: string | null
-  showLineNumbers?: boolean | null
-  noInlineHighlight?: boolean | null
+  directory?: string | null
 }
 
 export interface PackageJson_2 {
@@ -373,6 +393,7 @@ export interface FieldOwners_2 {
 export interface Frontmatter_2 {
   title?: string | null
   date?: Date | null
+  tags?: string[] | null
   _PARENT?: string | null
 }
 
@@ -594,12 +615,25 @@ export interface SitePageConnectionPluginCreatorVersionQueryString {
 
 export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
   plugins?: SitePageConnectionPluginCreatorPluginOptionsPluginsQueryList | null
+  name?: SitePageConnectionPluginCreatorPluginOptionsNameQueryString | null
+  short_name?: SitePageConnectionPluginCreatorPluginOptionsShortNameQueryString | null
+  start_url?: SitePageConnectionPluginCreatorPluginOptionsStartUrlQueryString | null
+  background_color?: SitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString | null
+  theme_color?: SitePageConnectionPluginCreatorPluginOptionsThemeColorQueryString | null
+  display?: SitePageConnectionPluginCreatorPluginOptionsDisplayQueryString | null
+  icon?: SitePageConnectionPluginCreatorPluginOptionsIconQueryString | null
+  maxWidth?: SitePageConnectionPluginCreatorPluginOptionsMaxWidthQueryInteger | null
+  wrapperStyle?: SitePageConnectionPluginCreatorPluginOptionsWrapperStyleQueryString | null
+  backgroundColor?: SitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString_2 | null
+  linkImagesToOriginal?: SitePageConnectionPluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean | null
+  showCaptions?: SitePageConnectionPluginCreatorPluginOptionsShowCaptionsQueryBoolean | null
+  pathPrefix?: SitePageConnectionPluginCreatorPluginOptionsPathPrefixQueryString | null
+  withWebp?: SitePageConnectionPluginCreatorPluginOptionsWithWebpQueryBoolean | null
+  ignoreFileExtensions?: SitePageConnectionPluginCreatorPluginOptionsIgnoreFileExtensionsQueryList | null
   classPrefix?: SitePageConnectionPluginCreatorPluginOptionsClassPrefixQueryString | null
-  showLineNumbers?: SitePageConnectionPluginCreatorPluginOptionsShowLineNumbersQueryBoolean | null
-  noInlineHighlight?: SitePageConnectionPluginCreatorPluginOptionsNoInlineHighlightQueryBoolean | null
+  directory?: SitePageConnectionPluginCreatorPluginOptionsDirectoryQueryString | null
   pathToConfigModule?: SitePageConnectionPluginCreatorPluginOptionsPathToConfigModuleQueryString | null
   omitGoogleFont?: SitePageConnectionPluginCreatorPluginOptionsOmitGoogleFontQueryBoolean | null
-  name?: SitePageConnectionPluginCreatorPluginOptionsNameQueryString | null
   path?: SitePageConnectionPluginCreatorPluginOptionsPathQueryString | null
   trackingId?: SitePageConnectionPluginCreatorPluginOptionsTrackingIdQueryString | null
   pathCheck?: SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean | null
@@ -655,9 +689,84 @@ export interface SitePageConnectionPluginCreatorPluginOptionsPluginsVersionQuery
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsInputObject {
+  maxWidth?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger | null
+  wrapperStyle?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString | null
+  backgroundColor?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString | null
+  linkImagesToOriginal?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean | null
+  showCaptions?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean | null
+  pathPrefix?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString | null
+  withWebp?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean | null
+  ignoreFileExtensions?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList | null
   classPrefix?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsClassPrefixQueryString | null
-  showLineNumbers?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsShowLineNumbersQueryBoolean | null
-  noInlineHighlight?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsNoInlineHighlightQueryBoolean | null
+  directory?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsDirectoryQueryString | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger {
+  eq?: number | null
+  ne?: number | null
+  gt?: number | null
+  gte?: number | null
+  lt?: number | null
+  lte?: number | null
+  in?: number[] | null
+  nin?: number[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsClassPrefixQueryString {
@@ -669,21 +778,147 @@ export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOption
   nin?: string[] | null
 }
 
-export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsShowLineNumbersQueryBoolean {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsNoInlineHighlightQueryBoolean {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsDirectoryQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginFilepathQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsNameQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsShortNameQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsStartUrlQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsThemeColorQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsDisplayQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsIconQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsMaxWidthQueryInteger {
+  eq?: number | null
+  ne?: number | null
+  gt?: number | null
+  gte?: number | null
+  lt?: number | null
+  lte?: number | null
+  in?: number[] | null
+  nin?: number[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsWrapperStyleQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsBackgroundColorQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsShowCaptionsQueryBoolean {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPathPrefixQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsWithWebpQueryBoolean {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -701,18 +936,13 @@ export interface SitePageConnectionPluginCreatorPluginOptionsClassPrefixQueryStr
   nin?: string[] | null
 }
 
-export interface SitePageConnectionPluginCreatorPluginOptionsShowLineNumbersQueryBoolean {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsNoInlineHighlightQueryBoolean {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
+export interface SitePageConnectionPluginCreatorPluginOptionsDirectoryQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPathToConfigModuleQueryString {
@@ -729,15 +959,6 @@ export interface SitePageConnectionPluginCreatorPluginOptionsOmitGoogleFontQuery
   ne?: boolean | null
   in?: boolean[] | null
   nin?: boolean[] | null
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsNameQueryString {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: string[] | null
-  nin?: string[] | null
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPathQueryString {
@@ -1117,12 +1338,25 @@ export interface SitePluginConnectionVersionQueryString_2 {
 
 export interface SitePluginConnectionPluginOptionsInputObject_2 {
   plugins?: SitePluginConnectionPluginOptionsPluginsQueryList_2 | null
+  name?: SitePluginConnectionPluginOptionsNameQueryString_2 | null
+  short_name?: SitePluginConnectionPluginOptionsShortNameQueryString_2 | null
+  start_url?: SitePluginConnectionPluginOptionsStartUrlQueryString_2 | null
+  background_color?: SitePluginConnectionPluginOptionsBackgroundColorQueryString_3 | null
+  theme_color?: SitePluginConnectionPluginOptionsThemeColorQueryString_2 | null
+  display?: SitePluginConnectionPluginOptionsDisplayQueryString_2 | null
+  icon?: SitePluginConnectionPluginOptionsIconQueryString_2 | null
+  maxWidth?: SitePluginConnectionPluginOptionsMaxWidthQueryInteger_2 | null
+  wrapperStyle?: SitePluginConnectionPluginOptionsWrapperStyleQueryString_2 | null
+  backgroundColor?: SitePluginConnectionPluginOptionsBackgroundColorQueryString_4 | null
+  linkImagesToOriginal?: SitePluginConnectionPluginOptionsLinkImagesToOriginalQueryBoolean_2 | null
+  showCaptions?: SitePluginConnectionPluginOptionsShowCaptionsQueryBoolean_2 | null
+  pathPrefix?: SitePluginConnectionPluginOptionsPathPrefixQueryString_2 | null
+  withWebp?: SitePluginConnectionPluginOptionsWithWebpQueryBoolean_2 | null
+  ignoreFileExtensions?: SitePluginConnectionPluginOptionsIgnoreFileExtensionsQueryList_2 | null
   classPrefix?: SitePluginConnectionPluginOptionsClassPrefixQueryString_2 | null
-  showLineNumbers?: SitePluginConnectionPluginOptionsShowLineNumbersQueryBoolean_2 | null
-  noInlineHighlight?: SitePluginConnectionPluginOptionsNoInlineHighlightQueryBoolean_2 | null
+  directory?: SitePluginConnectionPluginOptionsDirectoryQueryString_2 | null
   pathToConfigModule?: SitePluginConnectionPluginOptionsPathToConfigModuleQueryString_2 | null
   omitGoogleFont?: SitePluginConnectionPluginOptionsOmitGoogleFontQueryBoolean_2 | null
-  name?: SitePluginConnectionPluginOptionsNameQueryString_2 | null
   path?: SitePluginConnectionPluginOptionsPathQueryString_2 | null
   trackingId?: SitePluginConnectionPluginOptionsTrackingIdQueryString_2 | null
   pathCheck?: SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2 | null
@@ -1178,9 +1412,84 @@ export interface SitePluginConnectionPluginOptionsPluginsVersionQueryString_2 {
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsInputObject_2 {
+  maxWidth?: SitePluginConnectionPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger_2 | null
+  wrapperStyle?: SitePluginConnectionPluginOptionsPluginsPluginOptionsWrapperStyleQueryString_2 | null
+  backgroundColor?: SitePluginConnectionPluginOptionsPluginsPluginOptionsBackgroundColorQueryString_2 | null
+  linkImagesToOriginal?: SitePluginConnectionPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean_2 | null
+  showCaptions?: SitePluginConnectionPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean_2 | null
+  pathPrefix?: SitePluginConnectionPluginOptionsPluginsPluginOptionsPathPrefixQueryString_2 | null
+  withWebp?: SitePluginConnectionPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean_2 | null
+  ignoreFileExtensions?: SitePluginConnectionPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 | null
   classPrefix?: SitePluginConnectionPluginOptionsPluginsPluginOptionsClassPrefixQueryString_2 | null
-  showLineNumbers?: SitePluginConnectionPluginOptionsPluginsPluginOptionsShowLineNumbersQueryBoolean_2 | null
-  noInlineHighlight?: SitePluginConnectionPluginOptionsPluginsPluginOptionsNoInlineHighlightQueryBoolean_2 | null
+  directory?: SitePluginConnectionPluginOptionsPluginsPluginOptionsDirectoryQueryString_2 | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger_2 {
+  eq?: number | null
+  ne?: number | null
+  gt?: number | null
+  gte?: number | null
+  lt?: number | null
+  lte?: number | null
+  in?: number[] | null
+  nin?: number[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsWrapperStyleQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsBackgroundColorQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsPathPrefixQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsClassPrefixQueryString_2 {
@@ -1192,21 +1501,147 @@ export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsClassPrefi
   nin?: string[] | null
 }
 
-export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsShowLineNumbersQueryBoolean_2 {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
-}
-
-export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsNoInlineHighlightQueryBoolean_2 {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsDirectoryQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsPluginFilepathQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsShortNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsStartUrlQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsBackgroundColorQueryString_3 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsThemeColorQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsDisplayQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsIconQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsMaxWidthQueryInteger_2 {
+  eq?: number | null
+  ne?: number | null
+  gt?: number | null
+  gte?: number | null
+  lt?: number | null
+  lte?: number | null
+  in?: number[] | null
+  nin?: number[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsWrapperStyleQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsBackgroundColorQueryString_4 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsLinkImagesToOriginalQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsShowCaptionsQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPathPrefixQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsWithWebpQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsIgnoreFileExtensionsQueryList_2 {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -1224,18 +1659,13 @@ export interface SitePluginConnectionPluginOptionsClassPrefixQueryString_2 {
   nin?: string[] | null
 }
 
-export interface SitePluginConnectionPluginOptionsShowLineNumbersQueryBoolean_2 {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
-}
-
-export interface SitePluginConnectionPluginOptionsNoInlineHighlightQueryBoolean_2 {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
+export interface SitePluginConnectionPluginOptionsDirectoryQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
 }
 
 export interface SitePluginConnectionPluginOptionsPathToConfigModuleQueryString_2 {
@@ -1252,15 +1682,6 @@ export interface SitePluginConnectionPluginOptionsOmitGoogleFontQueryBoolean_2 {
   ne?: boolean | null
   in?: boolean[] | null
   nin?: boolean[] | null
-}
-
-export interface SitePluginConnectionPluginOptionsNameQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: string[] | null
-  nin?: string[] | null
 }
 
 export interface SitePluginConnectionPluginOptionsPathQueryString_2 {
@@ -2405,6 +2826,7 @@ export interface MarkdownRemarkConnectionInternalFieldOwnersSlugQueryString_2 {
 export interface MarkdownRemarkConnectionFrontmatterInputObject_2 {
   title?: MarkdownRemarkConnectionFrontmatterTitleQueryString_2 | null
   date?: MarkdownRemarkConnectionFrontmatterDateQueryString_2 | null
+  tags?: MarkdownRemarkConnectionFrontmatterTagsQueryList_2 | null
   _PARENT?: MarkdownRemarkConnectionFrontmatterParentQueryString_2 | null
 }
 
@@ -2418,6 +2840,15 @@ export interface MarkdownRemarkConnectionFrontmatterTitleQueryString_2 {
 }
 
 export interface MarkdownRemarkConnectionFrontmatterDateQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface MarkdownRemarkConnectionFrontmatterTagsQueryList_2 {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -2683,12 +3114,25 @@ export interface SitePagePluginCreatorVersionQueryString {
 
 export interface SitePagePluginCreatorPluginOptionsInputObject {
   plugins?: SitePagePluginCreatorPluginOptionsPluginsQueryList | null
+  name?: SitePagePluginCreatorPluginOptionsNameQueryString | null
+  short_name?: SitePagePluginCreatorPluginOptionsShortNameQueryString | null
+  start_url?: SitePagePluginCreatorPluginOptionsStartUrlQueryString | null
+  background_color?: SitePagePluginCreatorPluginOptionsBackgroundColorQueryString | null
+  theme_color?: SitePagePluginCreatorPluginOptionsThemeColorQueryString | null
+  display?: SitePagePluginCreatorPluginOptionsDisplayQueryString | null
+  icon?: SitePagePluginCreatorPluginOptionsIconQueryString | null
+  maxWidth?: SitePagePluginCreatorPluginOptionsMaxWidthQueryInteger | null
+  wrapperStyle?: SitePagePluginCreatorPluginOptionsWrapperStyleQueryString | null
+  backgroundColor?: SitePagePluginCreatorPluginOptionsBackgroundColorQueryString_2 | null
+  linkImagesToOriginal?: SitePagePluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean | null
+  showCaptions?: SitePagePluginCreatorPluginOptionsShowCaptionsQueryBoolean | null
+  pathPrefix?: SitePagePluginCreatorPluginOptionsPathPrefixQueryString | null
+  withWebp?: SitePagePluginCreatorPluginOptionsWithWebpQueryBoolean | null
+  ignoreFileExtensions?: SitePagePluginCreatorPluginOptionsIgnoreFileExtensionsQueryList | null
   classPrefix?: SitePagePluginCreatorPluginOptionsClassPrefixQueryString | null
-  showLineNumbers?: SitePagePluginCreatorPluginOptionsShowLineNumbersQueryBoolean | null
-  noInlineHighlight?: SitePagePluginCreatorPluginOptionsNoInlineHighlightQueryBoolean | null
+  directory?: SitePagePluginCreatorPluginOptionsDirectoryQueryString | null
   pathToConfigModule?: SitePagePluginCreatorPluginOptionsPathToConfigModuleQueryString | null
   omitGoogleFont?: SitePagePluginCreatorPluginOptionsOmitGoogleFontQueryBoolean | null
-  name?: SitePagePluginCreatorPluginOptionsNameQueryString | null
   path?: SitePagePluginCreatorPluginOptionsPathQueryString | null
   trackingId?: SitePagePluginCreatorPluginOptionsTrackingIdQueryString | null
   pathCheck?: SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean | null
@@ -2744,9 +3188,84 @@ export interface SitePagePluginCreatorPluginOptionsPluginsVersionQueryString {
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsInputObject {
+  maxWidth?: SitePagePluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger | null
+  wrapperStyle?: SitePagePluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString | null
+  backgroundColor?: SitePagePluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString | null
+  linkImagesToOriginal?: SitePagePluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean | null
+  showCaptions?: SitePagePluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean | null
+  pathPrefix?: SitePagePluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString | null
+  withWebp?: SitePagePluginCreatorPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean | null
+  ignoreFileExtensions?: SitePagePluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList | null
   classPrefix?: SitePagePluginCreatorPluginOptionsPluginsPluginOptionsClassPrefixQueryString | null
-  showLineNumbers?: SitePagePluginCreatorPluginOptionsPluginsPluginOptionsShowLineNumbersQueryBoolean | null
-  noInlineHighlight?: SitePagePluginCreatorPluginOptionsPluginsPluginOptionsNoInlineHighlightQueryBoolean | null
+  directory?: SitePagePluginCreatorPluginOptionsPluginsPluginOptionsDirectoryQueryString | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger {
+  eq?: number | null
+  ne?: number | null
+  gt?: number | null
+  gte?: number | null
+  lt?: number | null
+  lte?: number | null
+  in?: number[] | null
+  nin?: number[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsWrapperStyleQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsBackgroundColorQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsPathPrefixQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsClassPrefixQueryString {
@@ -2758,21 +3277,147 @@ export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsClassPref
   nin?: string[] | null
 }
 
-export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsShowLineNumbersQueryBoolean {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
-}
-
-export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsNoInlineHighlightQueryBoolean {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsDirectoryQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsPluginFilepathQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsNameQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsShortNameQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsStartUrlQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsBackgroundColorQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsThemeColorQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsDisplayQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsIconQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsMaxWidthQueryInteger {
+  eq?: number | null
+  ne?: number | null
+  gt?: number | null
+  gte?: number | null
+  lt?: number | null
+  lte?: number | null
+  in?: number[] | null
+  nin?: number[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsWrapperStyleQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsBackgroundColorQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsLinkImagesToOriginalQueryBoolean {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsShowCaptionsQueryBoolean {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPathPrefixQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsWithWebpQueryBoolean {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -2790,18 +3435,13 @@ export interface SitePagePluginCreatorPluginOptionsClassPrefixQueryString {
   nin?: string[] | null
 }
 
-export interface SitePagePluginCreatorPluginOptionsShowLineNumbersQueryBoolean {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
-}
-
-export interface SitePagePluginCreatorPluginOptionsNoInlineHighlightQueryBoolean {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
+export interface SitePagePluginCreatorPluginOptionsDirectoryQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
 }
 
 export interface SitePagePluginCreatorPluginOptionsPathToConfigModuleQueryString {
@@ -2818,15 +3458,6 @@ export interface SitePagePluginCreatorPluginOptionsOmitGoogleFontQueryBoolean {
   ne?: boolean | null
   in?: boolean[] | null
   nin?: boolean[] | null
-}
-
-export interface SitePagePluginCreatorPluginOptionsNameQueryString {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: string[] | null
-  nin?: string[] | null
 }
 
 export interface SitePagePluginCreatorPluginOptionsPathQueryString {
@@ -3187,12 +3818,25 @@ export interface SitePluginVersionQueryString_2 {
 
 export interface SitePluginPluginOptionsInputObject_2 {
   plugins?: SitePluginPluginOptionsPluginsQueryList_2 | null
+  name?: SitePluginPluginOptionsNameQueryString_2 | null
+  short_name?: SitePluginPluginOptionsShortNameQueryString_2 | null
+  start_url?: SitePluginPluginOptionsStartUrlQueryString_2 | null
+  background_color?: SitePluginPluginOptionsBackgroundColorQueryString_3 | null
+  theme_color?: SitePluginPluginOptionsThemeColorQueryString_2 | null
+  display?: SitePluginPluginOptionsDisplayQueryString_2 | null
+  icon?: SitePluginPluginOptionsIconQueryString_2 | null
+  maxWidth?: SitePluginPluginOptionsMaxWidthQueryInteger_2 | null
+  wrapperStyle?: SitePluginPluginOptionsWrapperStyleQueryString_2 | null
+  backgroundColor?: SitePluginPluginOptionsBackgroundColorQueryString_4 | null
+  linkImagesToOriginal?: SitePluginPluginOptionsLinkImagesToOriginalQueryBoolean_2 | null
+  showCaptions?: SitePluginPluginOptionsShowCaptionsQueryBoolean_2 | null
+  pathPrefix?: SitePluginPluginOptionsPathPrefixQueryString_2 | null
+  withWebp?: SitePluginPluginOptionsWithWebpQueryBoolean_2 | null
+  ignoreFileExtensions?: SitePluginPluginOptionsIgnoreFileExtensionsQueryList_2 | null
   classPrefix?: SitePluginPluginOptionsClassPrefixQueryString_2 | null
-  showLineNumbers?: SitePluginPluginOptionsShowLineNumbersQueryBoolean_2 | null
-  noInlineHighlight?: SitePluginPluginOptionsNoInlineHighlightQueryBoolean_2 | null
+  directory?: SitePluginPluginOptionsDirectoryQueryString_2 | null
   pathToConfigModule?: SitePluginPluginOptionsPathToConfigModuleQueryString_2 | null
   omitGoogleFont?: SitePluginPluginOptionsOmitGoogleFontQueryBoolean_2 | null
-  name?: SitePluginPluginOptionsNameQueryString_2 | null
   path?: SitePluginPluginOptionsPathQueryString_2 | null
   trackingId?: SitePluginPluginOptionsTrackingIdQueryString_2 | null
   pathCheck?: SitePluginPluginOptionsPathCheckQueryBoolean_2 | null
@@ -3248,9 +3892,84 @@ export interface SitePluginPluginOptionsPluginsVersionQueryString_2 {
 }
 
 export interface SitePluginPluginOptionsPluginsPluginOptionsInputObject_2 {
+  maxWidth?: SitePluginPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger_2 | null
+  wrapperStyle?: SitePluginPluginOptionsPluginsPluginOptionsWrapperStyleQueryString_2 | null
+  backgroundColor?: SitePluginPluginOptionsPluginsPluginOptionsBackgroundColorQueryString_2 | null
+  linkImagesToOriginal?: SitePluginPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean_2 | null
+  showCaptions?: SitePluginPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean_2 | null
+  pathPrefix?: SitePluginPluginOptionsPluginsPluginOptionsPathPrefixQueryString_2 | null
+  withWebp?: SitePluginPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean_2 | null
+  ignoreFileExtensions?: SitePluginPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 | null
   classPrefix?: SitePluginPluginOptionsPluginsPluginOptionsClassPrefixQueryString_2 | null
-  showLineNumbers?: SitePluginPluginOptionsPluginsPluginOptionsShowLineNumbersQueryBoolean_2 | null
-  noInlineHighlight?: SitePluginPluginOptionsPluginsPluginOptionsNoInlineHighlightQueryBoolean_2 | null
+  directory?: SitePluginPluginOptionsPluginsPluginOptionsDirectoryQueryString_2 | null
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsMaxWidthQueryInteger_2 {
+  eq?: number | null
+  ne?: number | null
+  gt?: number | null
+  gte?: number | null
+  lt?: number | null
+  lte?: number | null
+  in?: number[] | null
+  nin?: number[] | null
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsWrapperStyleQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsBackgroundColorQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsLinkImagesToOriginalQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsShowCaptionsQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsPathPrefixQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsWithWebpQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
 }
 
 export interface SitePluginPluginOptionsPluginsPluginOptionsClassPrefixQueryString_2 {
@@ -3262,21 +3981,147 @@ export interface SitePluginPluginOptionsPluginsPluginOptionsClassPrefixQueryStri
   nin?: string[] | null
 }
 
-export interface SitePluginPluginOptionsPluginsPluginOptionsShowLineNumbersQueryBoolean_2 {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
-}
-
-export interface SitePluginPluginOptionsPluginsPluginOptionsNoInlineHighlightQueryBoolean_2 {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
+export interface SitePluginPluginOptionsPluginsPluginOptionsDirectoryQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
 }
 
 export interface SitePluginPluginOptionsPluginsPluginFilepathQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsShortNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsStartUrlQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsBackgroundColorQueryString_3 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsThemeColorQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsDisplayQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsIconQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsMaxWidthQueryInteger_2 {
+  eq?: number | null
+  ne?: number | null
+  gt?: number | null
+  gte?: number | null
+  lt?: number | null
+  lte?: number | null
+  in?: number[] | null
+  nin?: number[] | null
+}
+
+export interface SitePluginPluginOptionsWrapperStyleQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsBackgroundColorQueryString_4 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsLinkImagesToOriginalQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePluginPluginOptionsShowCaptionsQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePluginPluginOptionsPathPrefixQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface SitePluginPluginOptionsWithWebpQueryBoolean_2 {
+  eq?: boolean | null
+  ne?: boolean | null
+  in?: boolean[] | null
+  nin?: boolean[] | null
+}
+
+export interface SitePluginPluginOptionsIgnoreFileExtensionsQueryList_2 {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -3294,18 +4139,13 @@ export interface SitePluginPluginOptionsClassPrefixQueryString_2 {
   nin?: string[] | null
 }
 
-export interface SitePluginPluginOptionsShowLineNumbersQueryBoolean_2 {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
-}
-
-export interface SitePluginPluginOptionsNoInlineHighlightQueryBoolean_2 {
-  eq?: boolean | null
-  ne?: boolean | null
-  in?: boolean[] | null
-  nin?: boolean[] | null
+export interface SitePluginPluginOptionsDirectoryQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
 }
 
 export interface SitePluginPluginOptionsPathToConfigModuleQueryString_2 {
@@ -3322,15 +4162,6 @@ export interface SitePluginPluginOptionsOmitGoogleFontQueryBoolean_2 {
   ne?: boolean | null
   in?: boolean[] | null
   nin?: boolean[] | null
-}
-
-export interface SitePluginPluginOptionsNameQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-  in?: string[] | null
-  nin?: string[] | null
 }
 
 export interface SitePluginPluginOptionsPathQueryString_2 {
@@ -4470,6 +5301,7 @@ export interface MarkdownRemarkInternalFieldOwnersSlugQueryString_2 {
 export interface MarkdownRemarkFrontmatterInputObject_2 {
   title?: MarkdownRemarkFrontmatterTitleQueryString_2 | null
   date?: MarkdownRemarkFrontmatterDateQueryString_2 | null
+  tags?: MarkdownRemarkFrontmatterTagsQueryList_2 | null
   _PARENT?: MarkdownRemarkFrontmatterParentQueryString_2 | null
 }
 
@@ -4483,6 +5315,15 @@ export interface MarkdownRemarkFrontmatterTitleQueryString_2 {
 }
 
 export interface MarkdownRemarkFrontmatterDateQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: string[] | null
+  nin?: string[] | null
+}
+
+export interface MarkdownRemarkFrontmatterTagsQueryList_2 {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -5093,12 +5934,25 @@ export enum SitePluginConnectionSortByFieldsEnum {
   name = 'name',
   version = 'version',
   pluginOptions___plugins = 'pluginOptions___plugins',
+  pluginOptions___name = 'pluginOptions___name',
+  pluginOptions___short_name = 'pluginOptions___short_name',
+  pluginOptions___start_url = 'pluginOptions___start_url',
+  pluginOptions___background_color = 'pluginOptions___background_color',
+  pluginOptions___theme_color = 'pluginOptions___theme_color',
+  pluginOptions___display = 'pluginOptions___display',
+  pluginOptions___icon = 'pluginOptions___icon',
+  pluginOptions___maxWidth = 'pluginOptions___maxWidth',
+  pluginOptions___wrapperStyle = 'pluginOptions___wrapperStyle',
+  pluginOptions___backgroundColor = 'pluginOptions___backgroundColor',
+  pluginOptions___linkImagesToOriginal = 'pluginOptions___linkImagesToOriginal',
+  pluginOptions___showCaptions = 'pluginOptions___showCaptions',
+  pluginOptions___pathPrefix = 'pluginOptions___pathPrefix',
+  pluginOptions___withWebp = 'pluginOptions___withWebp',
+  pluginOptions___ignoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
   pluginOptions___classPrefix = 'pluginOptions___classPrefix',
-  pluginOptions___showLineNumbers = 'pluginOptions___showLineNumbers',
-  pluginOptions___noInlineHighlight = 'pluginOptions___noInlineHighlight',
+  pluginOptions___directory = 'pluginOptions___directory',
   pluginOptions___pathToConfigModule = 'pluginOptions___pathToConfigModule',
   pluginOptions___omitGoogleFont = 'pluginOptions___omitGoogleFont',
-  pluginOptions___name = 'pluginOptions___name',
   pluginOptions___path = 'pluginOptions___path',
   pluginOptions___trackingId = 'pluginOptions___trackingId',
   pluginOptions___pathCheck = 'pluginOptions___pathCheck',
@@ -5133,12 +5987,25 @@ export enum SitePluginDistinctEnum {
   name = 'name',
   version = 'version',
   pluginOptions___plugins = 'pluginOptions___plugins',
+  pluginOptions___name = 'pluginOptions___name',
+  pluginOptions___short_name = 'pluginOptions___short_name',
+  pluginOptions___start_url = 'pluginOptions___start_url',
+  pluginOptions___background_color = 'pluginOptions___background_color',
+  pluginOptions___theme_color = 'pluginOptions___theme_color',
+  pluginOptions___display = 'pluginOptions___display',
+  pluginOptions___icon = 'pluginOptions___icon',
+  pluginOptions___maxWidth = 'pluginOptions___maxWidth',
+  pluginOptions___wrapperStyle = 'pluginOptions___wrapperStyle',
+  pluginOptions___backgroundColor = 'pluginOptions___backgroundColor',
+  pluginOptions___linkImagesToOriginal = 'pluginOptions___linkImagesToOriginal',
+  pluginOptions___showCaptions = 'pluginOptions___showCaptions',
+  pluginOptions___pathPrefix = 'pluginOptions___pathPrefix',
+  pluginOptions___withWebp = 'pluginOptions___withWebp',
+  pluginOptions___ignoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
   pluginOptions___classPrefix = 'pluginOptions___classPrefix',
-  pluginOptions___showLineNumbers = 'pluginOptions___showLineNumbers',
-  pluginOptions___noInlineHighlight = 'pluginOptions___noInlineHighlight',
+  pluginOptions___directory = 'pluginOptions___directory',
   pluginOptions___pathToConfigModule = 'pluginOptions___pathToConfigModule',
   pluginOptions___omitGoogleFont = 'pluginOptions___omitGoogleFont',
-  pluginOptions___name = 'pluginOptions___name',
   pluginOptions___path = 'pluginOptions___path',
   pluginOptions___trackingId = 'pluginOptions___trackingId',
   pluginOptions___pathCheck = 'pluginOptions___pathCheck',
@@ -5168,12 +6035,25 @@ export enum SitePluginGroupEnum {
   name = 'name',
   version = 'version',
   pluginOptions___plugins = 'pluginOptions___plugins',
+  pluginOptions___name = 'pluginOptions___name',
+  pluginOptions___short_name = 'pluginOptions___short_name',
+  pluginOptions___start_url = 'pluginOptions___start_url',
+  pluginOptions___background_color = 'pluginOptions___background_color',
+  pluginOptions___theme_color = 'pluginOptions___theme_color',
+  pluginOptions___display = 'pluginOptions___display',
+  pluginOptions___icon = 'pluginOptions___icon',
+  pluginOptions___maxWidth = 'pluginOptions___maxWidth',
+  pluginOptions___wrapperStyle = 'pluginOptions___wrapperStyle',
+  pluginOptions___backgroundColor = 'pluginOptions___backgroundColor',
+  pluginOptions___linkImagesToOriginal = 'pluginOptions___linkImagesToOriginal',
+  pluginOptions___showCaptions = 'pluginOptions___showCaptions',
+  pluginOptions___pathPrefix = 'pluginOptions___pathPrefix',
+  pluginOptions___withWebp = 'pluginOptions___withWebp',
+  pluginOptions___ignoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
   pluginOptions___classPrefix = 'pluginOptions___classPrefix',
-  pluginOptions___showLineNumbers = 'pluginOptions___showLineNumbers',
-  pluginOptions___noInlineHighlight = 'pluginOptions___noInlineHighlight',
+  pluginOptions___directory = 'pluginOptions___directory',
   pluginOptions___pathToConfigModule = 'pluginOptions___pathToConfigModule',
   pluginOptions___omitGoogleFont = 'pluginOptions___omitGoogleFont',
-  pluginOptions___name = 'pluginOptions___name',
   pluginOptions___path = 'pluginOptions___path',
   pluginOptions___trackingId = 'pluginOptions___trackingId',
   pluginOptions___pathCheck = 'pluginOptions___pathCheck',
@@ -5473,6 +6353,7 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
   frontmatter___title = 'frontmatter___title',
   frontmatter___date = 'frontmatter___date',
+  frontmatter___tags = 'frontmatter___tags',
   frontmatter____PARENT = 'frontmatter____PARENT',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
@@ -5502,6 +6383,7 @@ export enum MarkdownRemarkDistinctEnum {
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
   frontmatter___title = 'frontmatter___title',
   frontmatter___date = 'frontmatter___date',
+  frontmatter___tags = 'frontmatter___tags',
   frontmatter____PARENT = 'frontmatter____PARENT',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
@@ -5519,6 +6401,7 @@ export enum MarkdownRemarkGroupEnum {
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
   frontmatter___title = 'frontmatter___title',
   frontmatter___date = 'frontmatter___date',
+  frontmatter___tags = 'frontmatter___tags',
   frontmatter____PARENT = 'frontmatter____PARENT',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
@@ -5914,12 +6797,25 @@ export type SitePluginInternalResolver<R = Internal_8 | null, Parent = any, Cont
 
 export interface PluginOptions_3Resolvers<Context = any> {
   plugins?: PluginOptions_3PluginsResolver<Plugins_2[] | null, any, Context>
+  name?: PluginOptions_3NameResolver<string | null, any, Context>
+  short_name?: PluginOptions_3ShortNameResolver<string | null, any, Context>
+  start_url?: PluginOptions_3StartUrlResolver<string | null, any, Context>
+  background_color?: PluginOptions_3BackgroundColorResolver<string | null, any, Context>
+  theme_color?: PluginOptions_3ThemeColorResolver<string | null, any, Context>
+  display?: PluginOptions_3DisplayResolver<string | null, any, Context>
+  icon?: PluginOptions_3IconResolver<string | null, any, Context>
+  maxWidth?: PluginOptions_3MaxWidthResolver<number | null, any, Context>
+  wrapperStyle?: PluginOptions_3WrapperStyleResolver<string | null, any, Context>
+  backgroundColor?: PluginOptions_3BackgroundColorResolver<string | null, any, Context>
+  linkImagesToOriginal?: PluginOptions_3LinkImagesToOriginalResolver<boolean | null, any, Context>
+  showCaptions?: PluginOptions_3ShowCaptionsResolver<boolean | null, any, Context>
+  pathPrefix?: PluginOptions_3PathPrefixResolver<string | null, any, Context>
+  withWebp?: PluginOptions_3WithWebpResolver<boolean | null, any, Context>
+  ignoreFileExtensions?: PluginOptions_3IgnoreFileExtensionsResolver<string[] | null, any, Context>
   classPrefix?: PluginOptions_3ClassPrefixResolver<string | null, any, Context>
-  showLineNumbers?: PluginOptions_3ShowLineNumbersResolver<boolean | null, any, Context>
-  noInlineHighlight?: PluginOptions_3NoInlineHighlightResolver<boolean | null, any, Context>
+  directory?: PluginOptions_3DirectoryResolver<string | null, any, Context>
   pathToConfigModule?: PluginOptions_3PathToConfigModuleResolver<string | null, any, Context>
   omitGoogleFont?: PluginOptions_3OmitGoogleFontResolver<boolean | null, any, Context>
-  name?: PluginOptions_3NameResolver<string | null, any, Context>
   path?: PluginOptions_3PathResolver<string | null, any, Context>
   trackingId?: PluginOptions_3TrackingIdResolver<string | null, any, Context>
   pathCheck?: PluginOptions_3PathCheckResolver<boolean | null, any, Context>
@@ -5930,17 +6826,79 @@ export type PluginOptions_3PluginsResolver<R = Plugins_2[] | null, Parent = any,
   Parent,
   Context
 >
+export type PluginOptions_3NameResolver<R = string | null, Parent = any, Context = any> = Resolver<R, Parent, Context>
+export type PluginOptions_3ShortNameResolver<R = string | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_3StartUrlResolver<R = string | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_3BackgroundColorResolver<R = string | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_3ThemeColorResolver<R = string | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_3DisplayResolver<R = string | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_3IconResolver<R = string | null, Parent = any, Context = any> = Resolver<R, Parent, Context>
+export type PluginOptions_3MaxWidthResolver<R = number | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_3WrapperStyleResolver<R = string | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_3BackgroundColorResolver<R = string | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_3LinkImagesToOriginalResolver<R = boolean | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_3ShowCaptionsResolver<R = boolean | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_3PathPrefixResolver<R = string | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_3WithWebpResolver<R = boolean | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_3IgnoreFileExtensionsResolver<R = string[] | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
 export type PluginOptions_3ClassPrefixResolver<R = string | null, Parent = any, Context = any> = Resolver<
   R,
   Parent,
   Context
 >
-export type PluginOptions_3ShowLineNumbersResolver<R = boolean | null, Parent = any, Context = any> = Resolver<
-  R,
-  Parent,
-  Context
->
-export type PluginOptions_3NoInlineHighlightResolver<R = boolean | null, Parent = any, Context = any> = Resolver<
+export type PluginOptions_3DirectoryResolver<R = string | null, Parent = any, Context = any> = Resolver<
   R,
   Parent,
   Context
@@ -5955,7 +6913,6 @@ export type PluginOptions_3OmitGoogleFontResolver<R = boolean | null, Parent = a
   Parent,
   Context
 >
-export type PluginOptions_3NameResolver<R = string | null, Parent = any, Context = any> = Resolver<R, Parent, Context>
 export type PluginOptions_3PathResolver<R = string | null, Parent = any, Context = any> = Resolver<R, Parent, Context>
 export type PluginOptions_3TrackingIdResolver<R = string | null, Parent = any, Context = any> = Resolver<
   R,
@@ -5993,22 +6950,64 @@ export type Plugins_2PluginFilepathResolver<R = string | null, Parent = any, Con
 >
 
 export interface PluginOptions_4Resolvers<Context = any> {
+  maxWidth?: PluginOptions_4MaxWidthResolver<number | null, any, Context>
+  wrapperStyle?: PluginOptions_4WrapperStyleResolver<string | null, any, Context>
+  backgroundColor?: PluginOptions_4BackgroundColorResolver<string | null, any, Context>
+  linkImagesToOriginal?: PluginOptions_4LinkImagesToOriginalResolver<boolean | null, any, Context>
+  showCaptions?: PluginOptions_4ShowCaptionsResolver<boolean | null, any, Context>
+  pathPrefix?: PluginOptions_4PathPrefixResolver<string | null, any, Context>
+  withWebp?: PluginOptions_4WithWebpResolver<boolean | null, any, Context>
+  ignoreFileExtensions?: PluginOptions_4IgnoreFileExtensionsResolver<string[] | null, any, Context>
   classPrefix?: PluginOptions_4ClassPrefixResolver<string | null, any, Context>
-  showLineNumbers?: PluginOptions_4ShowLineNumbersResolver<boolean | null, any, Context>
-  noInlineHighlight?: PluginOptions_4NoInlineHighlightResolver<boolean | null, any, Context>
+  directory?: PluginOptions_4DirectoryResolver<string | null, any, Context>
 }
 
+export type PluginOptions_4MaxWidthResolver<R = number | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_4WrapperStyleResolver<R = string | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_4BackgroundColorResolver<R = string | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_4LinkImagesToOriginalResolver<R = boolean | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_4ShowCaptionsResolver<R = boolean | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_4PathPrefixResolver<R = string | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_4WithWebpResolver<R = boolean | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
+export type PluginOptions_4IgnoreFileExtensionsResolver<R = string[] | null, Parent = any, Context = any> = Resolver<
+  R,
+  Parent,
+  Context
+>
 export type PluginOptions_4ClassPrefixResolver<R = string | null, Parent = any, Context = any> = Resolver<
   R,
   Parent,
   Context
 >
-export type PluginOptions_4ShowLineNumbersResolver<R = boolean | null, Parent = any, Context = any> = Resolver<
-  R,
-  Parent,
-  Context
->
-export type PluginOptions_4NoInlineHighlightResolver<R = boolean | null, Parent = any, Context = any> = Resolver<
+export type PluginOptions_4DirectoryResolver<R = string | null, Parent = any, Context = any> = Resolver<
   R,
   Parent,
   Context
@@ -6993,6 +7992,7 @@ export type FieldOwners_2SlugResolver<R = string | null, Parent = any, Context =
 export interface Frontmatter_2Resolvers<Context = any> {
   title?: Frontmatter_2TitleResolver<string | null, any, Context>
   date?: Frontmatter_2DateResolver<Date | null, any, Context>
+  tags?: Frontmatter_2TagsResolver<string[] | null, any, Context>
   _PARENT?: Frontmatter_2ParentResolver<string | null, any, Context>
 }
 
@@ -7009,6 +8009,7 @@ export interface Frontmatter_2DateArgs {
   locale?: string | null /** Configures the locale Moment.js will use to format the date. */
 }
 
+export type Frontmatter_2TagsResolver<R = string[] | null, Parent = any, Context = any> = Resolver<R, Parent, Context>
 export type Frontmatter_2ParentResolver<R = string | null, Parent = any, Context = any> = Resolver<R, Parent, Context>
 
 export interface Fields_2Resolvers<Context = any> {
@@ -7366,32 +8367,47 @@ export type AnonymousQuery_2Variables = {}
 
 export type AnonymousQuery_2Query = {
   __typename?: 'Query'
-  allFile?: AnonymousQuery_2AllFile | null
+  allMarkdownRemark?: AnonymousQuery_2AllMarkdownRemark | null
 }
 
-export type AnonymousQuery_2AllFile = {
-  __typename?: 'FileConnection'
+export type AnonymousQuery_2AllMarkdownRemark = {
+  __typename?: 'MarkdownRemarkConnection'
   edges?: AnonymousQuery_2Edges[] | null
 }
 
 export type AnonymousQuery_2Edges = {
-  __typename?: 'FileEdge'
+  __typename?: 'MarkdownRemarkEdge'
   node?: AnonymousQuery_2Node | null
 }
 
 export type AnonymousQuery_2Node = {
-  __typename?: 'File'
-  relativePath?: string | null
-  prettySize?: string | null
-  extension?: string | null
-  birthTime?: Date | null
+  __typename?: 'MarkdownRemark'
+  frontmatter?: AnonymousQuery_2Frontmatter | null
+}
+
+export type AnonymousQuery_2Frontmatter = {
+  __typename?: 'frontmatter_2'
+  title?: string | null
+  date?: Date | null
+  tags?: string[] | null
 }
 
 export type AnonymousQuery_3Variables = {}
 
 export type AnonymousQuery_3Query = {
   __typename?: 'Query'
+  site?: AnonymousQuery_3Site | null
   allMarkdownRemark?: AnonymousQuery_3AllMarkdownRemark | null
+}
+
+export type AnonymousQuery_3Site = {
+  __typename?: 'Site'
+  siteMetadata?: AnonymousQuery_3SiteMetadata | null
+}
+
+export type AnonymousQuery_3SiteMetadata = {
+  __typename?: 'siteMetadata_2'
+  siteName?: string | null
 }
 
 export type AnonymousQuery_3AllMarkdownRemark = {

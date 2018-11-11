@@ -1,6 +1,7 @@
 ---
 title: '正则表达式用法'
 date: '2017-07-19'
+tags: ['javascript', 'regexp']
 ---
 
 ## 创建正则表达式

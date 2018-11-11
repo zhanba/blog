@@ -12,6 +12,7 @@ export const query = graphql`
           frontmatter {
             title
             date
+            tags
           }
         }
       }
@@ -38,6 +39,7 @@ export default class Content extends React.Component<IContentProps, any> {
               <tr>
                 <th>title</th>
                 <th>date</th>
+                <th>tags</th>
               </tr>
             </thead>
             <tbody>
@@ -46,6 +48,7 @@ export default class Content extends React.Component<IContentProps, any> {
                   <tr key={index}>
                     <td>{node!.frontmatter!.title}</td>
                     <td>{node!.frontmatter!.date}</td>
+                    <td>{node!.frontmatter!.tags!.join(', ')}</td>
                   </tr>
                 ))}
             </tbody>
