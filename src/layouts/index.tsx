@@ -1,6 +1,6 @@
 import * as React from 'react'
-
 import { Header } from '../components/Header'
+import '../style/global.css'
 import { rhythm } from '../utils/typography'
 
 const MainLayout: React.SFC = ({ children }) => (
@@ -13,7 +13,7 @@ const MainLayout: React.SFC = ({ children }) => (
     }}
   >
     <Header />
-    <div style={{ margin: `0 auto`, maxWidth: '800px' }}>{children}</div>
+    <div style={{ margin: `0 auto`, maxWidth: '800px', padding: '0 1rem' }}>{children}</div>
   </div>
 )
 

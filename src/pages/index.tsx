@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import Layout from '../layouts'
 import { Query } from '../typings/types'
 import { rhythm } from '../utils/typography'
+import './index.css'
 
 export default ({ data }: { data: Query }) => {
   return (
@@ -14,7 +15,7 @@ export default ({ data }: { data: Query }) => {
       </Helmet>
       <div>
         {data!.allMarkdownRemark!.edges!.map(({ node }) => (
-          <div key={node!.id}>
+          <div className="post" key={node!.id}>
             <Link to={node!.fields!.slug!} style={{ color: 'inherit', textDecoration: 'none' }}>
               <h3 style={{ marginBottom: rhythm(1 / 4) }}>
                 {node!.frontmatter!.title} <span style={{ color: '#bbb' }}>— {node!.frontmatter!.date}</span>
@@ -23,7 +24,6 @@ export default ({ data }: { data: Query }) => {
             </Link>
           </div>
         ))}
-        <h4>{data!.allMarkdownRemark!.totalCount} Posts</h4>
       </div>
     </Layout>
   )

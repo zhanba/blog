@@ -1,0 +1,43 @@
+.header {
+  margin-bottom: 1.5rem;
+  background-color: var(--background-color);
+  height: 40px;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  display: inline;
+  color: var(--title-color);
+  line-height: 40px;
+}
+
+.title:hover {
+  color: var(--primary-color);
+}
+
+.title-link {
+  text-shadow: none;
+  background-image: none;
+  margin-left: 1rem;
+}
+
+.header-menu {
+  display: inline-block;
+  margin-right: 1rem;
+  line-height: 40px;
+}
+
+.header-menu-link {
+  text-decoration: none;
+  color: var(--title-color);
+  text-shadow: none;
+  background-image: none;
+}
+
+.header-menu-link:hover {
+  color: var(--primary-color);
+}

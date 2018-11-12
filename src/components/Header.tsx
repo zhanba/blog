@@ -1,6 +1,7 @@
 import { graphql, Link, StaticQuery } from 'gatsby'
 import React from 'react'
 import { Query } from '../typings/types'
+import './header.css'
 
 interface ILink {
   to: string
@@ -8,8 +9,8 @@ interface ILink {
 }
 
 const ListLink = (props: ILink) => (
-  <li style={{ display: `inline-block`, marginRight: `1rem`, lineHeight: '40px' }}>
-    <Link style={{ textDecoration: 'none', color: '#fff', textShadow: `none`, backgroundImage: `none` }} to={props.to}>
+  <li className="header-menu">
+    <Link className="header-menu-link" to={props.to}>
       {props.children}
     </Link>
   </li>
@@ -28,18 +29,13 @@ const query = graphql`
 export const Header = () => (
   <StaticQuery
     query={query}
+    // tslint:disable-next-line:jsx-no-lambda
     render={(data: Query) => (
-      <header
-        style={
-          { marginBottom: `1.5rem`, backgroundColor: '#20232a', height: '40px' } // tslint:disable-next-line:jsx-no-lambda
-        }
-      >
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+      <header className="header">
+        <div className="header-content">
           {data && (
-            <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-              <h3 style={{ display: `inline`, color: '#fff', lineHeight: '40px' }}>
-                {data!.site!.siteMetadata!.siteName}
-              </h3>
+            <Link to="/" className="title-link">
+              <h3 className="title">{data!.site!.siteMetadata!.siteName}</h3>
             </Link>
           )}
           <ul style={{ listStyle: `none`, float: `right` }}>
