@@ -8,6 +8,6 @@ export default () => (
       <meta charSet="utf-8" />
       <title>About</title>
     </Helmet>
-    初级程序员 & 电影爱好者
+    <p>初级程序员 & 电影爱好者</p>
   </Layout>
 )
