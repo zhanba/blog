@@ -1,0 +1,83 @@
+/**
+ * Based on copypasta from Remy Bach and Sarah Drasner
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: Consolas,Menlo,Monaco,source-code-pro,Courier New,monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  border-radius: 10px;
+  overflow: auto;
+  padding: 1em;
+}
+
+pre[class*="language-"]::-moz-selection {
+  /* Firefox */
+  background: hsl(207, 4%, 16%);
+}
+
+pre[class*="language-"]::selection {
+  /* Safari */
+  background: hsl(207, 4%, 16%);
+}
+
+/* Text Selection colour */
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: hsla(0, 0%, 93%, 0.15);
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: hsla(0, 0%, 93%, 0.15);
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  border-radius: .3em;
+  padding: .15em .2em .05em;
+  white-space: normal;
+}
+
+pre[data-line] {
+  padding: 1em 0 1em 3em;
+  position: relative;
+}
+
+.gatsby-highlight-code-line {
+  background-color: hsla(207, 95%, 15%, 1);
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #ffa7c4;
+}
+
+.gatsby-highlight {
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"] {
+  float: left;
+  min-width: 100%;
+}
