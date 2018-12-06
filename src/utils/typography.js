@@ -1,6 +1,6 @@
 import Typography from 'typography'
-// import theme from 'typography-theme-github'
-import theme from 'typography-theme-fairy-gates'
+import theme from 'typography-theme-github'
+// import theme from 'typography-theme-fairy-gates'
 
 theme.baseFontSize = '16px'
 
