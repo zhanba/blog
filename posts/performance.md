@@ -1,51 +1,51 @@
 ---
 title: 'web性能优化'
 date: '2018-01-06'
-tags: ['performance']
+tags: ['web', 'performance']
 ---
 
-# 性能的重要性 why performance matters
+## 性能的重要性 why performance matters
 
 - retaining users
 - conversions
 - user experience
 - delivering information expediently
 
-# 关注点
+## 关注点
 
 - Mind what resources you send
-  > css 框架是否必须
-  > js 库是否必须
-  > 不是所有网站都需要成为 SPA（js 需要下载，解析，编译，执行，十分昂贵）
+  - css 框架是否必须
+  - js 库是否必须
+  - 不是所有网站都需要成为 SPA（js 需要下载，解析，编译，执行，十分昂贵）
 - Mind how you send resources
-  > http2
-  > resource hint(preload) https://www.w3.org/TR/resource-hints/ https://www.keycdn.com/blog/resource-hints/
-  > code splitting
+  - http/2
+  - [resource hint](https://www.w3.org/TR/resource-hints/) / [preload](https://www.keycdn.com/blog/resource-hints/)
+  - code splitting
 - Mind how much data you send
-  > 文本压缩
-  > 服务端压缩。gzip
-  > 优化图片
-  > 替换成更好的格式。webp
-  > 响应式图片（移动端）。srcset
-  > 使用视频而不是 GIF
-  > Client hints http://httpwg.org/http-extensions/client-hints.html
+  - 文本压缩
+  - 服务端压缩。gzip
+  - 优化图片
+  - 替换成更好的格式 / webp
+  - 响应式图片（移动端）/ srcset
+  - 使用视频而不是 GIF
+  - [Client hints](http://httpwg.org/http-extensions/client-hints.html)
 
-# RAIL 模型
+## RAIL 模型
 
-- response: 100ms
-- animation: 10ms/frame
-- idle: 要实现小于 100 毫秒的响应，应用必须在每 50 毫秒内将控制返回给主线程
-- load: 100ms
+- Response: 100ms
+- Animation: 10ms/frame
+- Idle: 要实现小于 100 毫秒的响应，应用必须在每 50 毫秒内将控制返回给主线程
+- Load: 100ms
 
-# loading performance
+## loading performance
 
-## 性能测量
+### 性能测量
 
 - Lighthouse
 - WebPageTest
 - PageSpeed Insights
 
-## Performance API
+### Performance API
 
 ```js
 // Get Navigation Timing entries 针对html文档
@@ -242,24 +242,22 @@ observer.observe({ entryTypes: ['longtask'] })
 - [srcset 和 picture](https://developers.google.com/web/fundamentals/design-and-ux/responsive/images?hl=zh-cn#images-in-markup)
 - 徽标和艺术线条等矢量插画及纯色图形使用矢量格式如 svg(优化 svg，https://github.com/svg/svgo, 文本压缩方法适用于 svg)
 - Data URI
-- css: image-set()/媒体查询/
+- css: image-set()/媒体查询
 - 选择合适的图片格式
-  > jpeg 为有损压缩
-  > gif 的 color space 只有 256，无损压缩
-  > png 无损，支持透明，png8/png24
-  > webp 压缩率高，支持透明和动画，有损，只有 chrome 支持，需要服务端/CDN 对浏览器进行判断
+  - jpeg 为有损压缩
+  - gif 的 color space 只有 256，无损压缩
+  - png 无损，支持透明，png8/png24
+  - webp 压缩率高，支持透明和动画，有损，只有 chrome 支持，需要服务端/CDN 对浏览器进行判断
 - GIF 转 MP4(ffmpeg), 体积更小，一些 cpu 带有视频硬件加速，解码更快
 - 使用图片转换和压缩工具如 jpegtran/OptiPNG,最好利用工具自动化进行
-  > https://www.imagemagick.org/script/index.php
- > https://github.com/imagemin/imagemin
+  - https://www.imagemagick.org/script/index.php
+  - https://github.com/imagemin/imagemin
 - image sprites
 - 去除图片元数据 metaddata（ps，gimp）
 - 调整图片大小
-  > 裁剪图片
-  > 降低图片质量
-  > 压缩图片 Compress Images, 更先进的编码器 Guetzli/MozJPEG
-  > https://github.com/mozilla/mozjpeg
- > https://github.com/google/guetzli
+  - 裁剪图片
+  - 降低图片质量
+  - 压缩图片 Compress Images, 更先进的编码器 [Guetzli](https://github.com/google/guetzli)/[MozJPEG](https://github.com/mozilla/mozjpeg)
 - 关键图片 preload
 - 图片懒加载 https://github.com/zouhir/lqip-loader https://github.com/aFarkas/lazysizes
 - 使用强缓存 e.g Cache-Control:public; max-age=31536000
@@ -274,17 +272,17 @@ observer.observe({ entryTypes: ['longtask'] })
 - 每个像素点存储 rgba 四个通道
 - 每个通道包含 8 位（2^8）色阶
 - 优化方式
-  > 减少色阶
-  > 增量编码 Delta encoding
-  > 更多专业方法https://en.wikipedia.org/wiki/Image_compression
+  - 减少色阶
+  - 增量编码 Delta encoding
+  - [更多专业方法](https://en.wikipedia.org/wiki/Image_compression)
 
 ### 优化 javascript
 
 - code-splitting : critical/non-critical(lazy-load)
 - Minification
 - es5: [UglifyJS](https://github.com/mishoo/UglifyJS2)
-- es6: [babel-minify](https://github.com/babel/minify) [uglify-es](https://github.com/mishoo/UglifyJS2/tree/harmony)
-- Compression: gzip/[Brotli](https://github.com/google/brotli)
+- es6: [babel-minify](https://github.com/babel/minify) / [uglify-es](https://github.com/mishoo/UglifyJS2/tree/harmony)
+- Compression: gzip / [Brotli](https://github.com/google/brotli)
 - Removing unused code
   - babel-preset-env / browserlist
   - tree-shaking
@@ -302,8 +300,8 @@ observer.observe({ entryTypes: ['longtask'] })
   - async/defer
   - 自己 host 脚本，如果第三方很慢（但是无法处理更新问题，可以考虑使用 service-worker 来处理缓存策略）
   - 使用 Resource hints
-    > `<link rel="dns-prefetch" href="http://example.com">`
- > `<link rel="preconnect" href="https://cdn.example.com">`
+    - `<link rel="dns-prefetch" href="http://example.com">`
+    - `<link rel="preconnect" href="https://cdn.example.com">`
   - 使用 iframe 沙箱化脚本
   - 懒加载第三方脚本（渲染完成后加载/滚动到加载），Intersection Observer
   - 安全：https, iframe sandbox 属性， CSP(Content-Security-Policy)
@@ -316,9 +314,9 @@ observer.observe({ entryTypes: ['longtask'] })
 - @font-face format() 指定格式
 - unicode-range
 - 字体渲染： 浏览器在构建好渲染树之后才知道需要哪些字体来渲染文本，因此字体请求会落后其他资源。
-  > Safari 会在字体下载完成之前延迟文本渲染。
-  > Chrome 和 Firefox 会将字体渲染暂停最多 3 秒，之后他们会使用一种后备字体。并且字体下载完成后，他们会使用下载的字体重新渲染一次文本。
-  > IE 会在请求字体尚不可用时立即使用后备字体进行渲染，然后在字体下载完成后进行重新渲染。
+  - Safari 会在字体下载完成之前延迟文本渲染。
+  - Chrome 和 Firefox 会将字体渲染暂停最多 3 秒，之后他们会使用一种后备字体。并且字体下载完成后，他们会使用下载的字体重新渲染一次文本。
+  - IE 会在请求字体尚不可用时立即使用后备字体进行渲染，然后在字体下载完成后进行重新渲染。
 - Font Loading API
 - 使用 HTTP 长期缓存来缓存字体
 
@@ -331,15 +329,15 @@ observer.observe({ entryTypes: ['longtask'] })
 
 ### HTTP 缓存
 
-- https://calendar.perfplanet.com/2016/a-tale-of-four-caches/
-- https://jakearchibald.com/2016/caching-best-practices/
-- https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching
+- [A Tale of Four Caches](https://calendar.perfplanet.com/2016/a-tale-of-four-caches/)
+- [Caching best practices & max-age gotchas](https://jakearchibald.com/2016/caching-best-practices/)
+- [HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
 
 ### 使用 Save-Data
 
--
+- TODO
 
-## other
+## 参考
 
 - https://developers.google.com/web/fundamentals/performance
 - https://bitsofco.de/understanding-the-critical-rendering-path/
