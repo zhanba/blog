@@ -20,6 +20,7 @@ export default ({ data }: { data: Query }) => {
         style={{
           backgroundColor: '#e6e3db',
           border: '2px solid #d21a1a',
+          borderRadius: '5px',
           padding: '3px',
         }}
       >
